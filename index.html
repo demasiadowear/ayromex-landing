@@ -670,76 +670,60 @@
         }
 
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hamburger {
-                display: flex;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
+      @media (max-width: 768px) {
+    .hero-logo {
+        width: 280px;
+        height: 120px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
 
-            .hero-logo {
-                width: 250px;
-                height: 100px;
-            }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .section {
+        padding: 4rem 1rem;
+    }
+    
+    .company-info {
+        grid-template-columns: 1fr;
+    }
 
-            .hero-logo .logo-placeholder {
-                font-size: 1.8rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .portfolio-card {
-                padding: 2rem;
-                margin: 0 1rem;
-            }
-            
-            .section {
-                padding: 4rem 1rem;
-            }
-            
-            .company-info {
-                grid-template-columns: 1fr;
-            }
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 
-            .brands-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
+    .section h2 {
+        font-size: 2rem;
+    }
 
-            .section h2 {
-                font-size: 2rem;
-            }
-
-            .mission {
-                padding: 2rem;
-                margin: 2rem 1rem;
-            }
-
-            .contact-form-section {
-                padding: 2rem;
-                margin: 2rem 1rem;
-            }
-
-            .contact {
-                padding: 2rem;
-                margin: 2rem 1rem;
-            }
-
-            .cta-button {
-                display: block;
-                margin: 1rem auto;
-                text-align: center;
-            }
-        }
-
+    .cta-button {
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
         /* Animations */
         @keyframes fadeInUp {
             from {
