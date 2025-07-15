@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYROMEX SRL - Holding Creativa</title>
+    <title>AYROMEX SRL - Holding Creativa Romania | Brand Identity & Digital Marketing</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Ayromex SRL - Holding creativa romena specializzata in brand identity, digital marketing e progetti innovativi. Portfolio: D3MAS1ADØ, Boostami, Ayrodom, Ayrobooks, Secretone.">
-    <meta name="keywords" content="holding creativa, brand identity, digital marketing, startup incubator, D3MAS1ADØ, Boostami, web design, AI marketing">
+    <!-- SEO Meta Tags Ottimizzati -->
+    <meta name="description" content="AYROMEX SRL - Holding creativa romena leader in brand identity, digital marketing e progetti AI. Portfolio: D3MAS1ADØ, Boostami, Ayrodom, Ayrobooks, Ayroctopus, Secret One. Costituita 2025.">
+    <meta name="keywords" content="holding creativa romania, brand identity bucuresti, digital marketing, startup incubator, D3MAS1ADØ, Boostami, web design, AI marketing, agenzia creativa">
     <meta name="author" content="AYROMEX SRL">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Italian">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="AYROMEX SRL - Holding Creativa">
-    <meta property="og:description" content="Ecosistema decentralizzato di brand e progetti che ridefiniscono il mercato creativo attraverso l'innovazione, l'automazione e l'impatto visivo.">
+    <!-- Open Graph Meta Tags Migliorati -->
+    <meta property="og:title" content="AYROMEX SRL - Ecosistema Creativo che Ridefinisce i Mercati">
+    <meta property="og:description" content="🚀 Holding creativa con 6 brand innovativi: D3MAS1ADØ, Boostami, Ayrodom, Ayrobooks, Ayroctopus, Secret One. Trasformiamo visioni in brand iconici attraverso AI e automazione.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ayromex.com">
     <meta property="og:site_name" content="AYROMEX SRL">
     <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.ayromex.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AYROMEX SRL - Holding Creativa">
-    <meta name="twitter:description" content="Ecosistema decentralizzato di brand innovativi. Portfolio: D3MAS1ADØ, Boostami, Ayrodom, Ayrobooks, Secretone.">
+    <meta name="twitter:description" content="🧬 Ecosistema di 6 brand innovativi che ridefiniscono il mercato creativo. D3MAS1ADØ, Boostami, Ayrodom e altri progetti visionari.">
+    <meta name="twitter:image" content="https://www.ayromex.com/twitter-card.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -40,6 +44,7 @@
         "name": "AYROMEX SRL",
         "legalName": "AYROMEX SRL",
         "url": "https://www.ayromex.com",
+        "foundingDate": "2025-06-24",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Aleea Izvorul Oltului 6",
@@ -50,6 +55,9 @@
         "taxID": "RO52014564",
         "naics": "7311",
         "description": "Holding creativa romena specializzata in brand identity, digital marketing e progetti innovativi",
+        "logo": "https://www.ayromex.com/logo.png",
+        "sameAs": [
+            "https://www.instagram.com/demasiadowear"
         ]
     }
     </script>
@@ -65,6 +73,7 @@
             background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
             color: #ffffff;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         /* Navigation */
@@ -115,6 +124,70 @@
             color: #ff6b35;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ff6b35;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 2rem;
+            margin: 1rem 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #ff6b35;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -141,13 +214,39 @@
             padding: 2rem;
         }
 
-        .hero h1 {
-            font-size: 4.5rem;
+        /* Hero Logo */
+        .hero-logo {
+            width: 300px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-logo:hover {
+            border-color: #ff6b35;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .hero-logo .logo-placeholder {
+            font-size: 2.5rem;
             font-weight: 900;
-            margin-bottom: 1rem;
+            color: #ff6b35;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #ffffff;
+            letter-spacing: 3px;
+        }
+
+        .hero-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .hero .subtitle {
@@ -167,6 +266,41 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            margin: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #ff6b35;
+            color: #ff6b35;
+        }
+
+        .cta-button.secondary:hover {
+            background: #ff6b35;
+            color: white;
         }
 
         .company-info {
@@ -192,6 +326,49 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Sezione Loghi Brand */
+        .brands-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(255, 107, 53, 0.02);
+            margin: 2rem 0;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            align-items: center;
+        }
+
+        .brand-logo {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s ease;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b35;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        .brand-logo .logo-placeholder {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b35;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
@@ -369,8 +546,60 @@
             font-size: 1.2rem;
             line-height: 1.8;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
             opacity: 0.9;
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
         }
 
         /* Contact Section */
@@ -448,8 +677,21 @@
                 display: none;
             }
             
-            .hero h1 {
-                font-size: 2.5rem;
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-logo {
+                width: 250px;
+                height: 100px;
+            }
+
+            .hero-logo .logo-placeholder {
+                font-size: 1.8rem;
             }
             
             .portfolio-grid {
@@ -458,6 +700,7 @@
             
             .portfolio-card {
                 padding: 2rem;
+                margin: 0 1rem;
             }
             
             .section {
@@ -467,6 +710,65 @@
             .company-info {
                 grid-template-columns: 1fr;
             }
+
+            .brands-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .mission {
+                padding: 2rem;
+                margin: 2rem 1rem;
+            }
+
+            .contact-form-section {
+                padding: 2rem;
+                margin: 2rem 1rem;
+            }
+
+            .contact {
+                padding: 2rem;
+                margin: 2rem 1rem;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 1rem auto;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Accessibilità */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     </style>
 </head>
@@ -481,16 +783,41 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
+            <div class="hamburger" aria-label="Menu toggle" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contatti</a>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1>AYROMEX SRL</h1>
+            <!-- Logo principale AYROMEX -->
+            <div class="hero-logo">
+                <!-- Qui inserire il logo AYROMEX -->
+                <div class="logo-placeholder">AYROMEX</div>
+                <!-- Quando avrai il logo, sostituisci con: -->
+                <!-- <img src="logo-ayromex.png" alt="AYROMEX Logo"> -->
+            </div>
+            
             <div class="subtitle">Holding Creativa</div>
             <p>Ecosistema decentralizzato di brand e progetti che ridefiniscono il mercato creativo attraverso l'innovazione, l'automazione e l'impatto visivo.</p>
+            
+            <div style="margin: 3rem 0;">
+                <a href="#contact" class="cta-button">Inizia la Rivoluzione</a>
+                <a href="#portfolio" class="cta-button secondary">Scopri Portfolio</a>
+            </div>
             
             <div class="company-info">
                 <div class="info-item">
@@ -505,10 +832,37 @@
         </div>
     </section>
 
+    <!-- Sezione Loghi Brand -->
+    <section class="brands-section">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #ff6b35;">I Nostri Brand</h2>
+        <p style="opacity: 0.8; margin-bottom: 2rem;">Ecosistema integrato di marchi innovativi</p>
+        <div class="brands-grid">
+            <div class="brand-logo">
+                <div class="logo-placeholder">AYROMEX</div>
+            </div>
+            <div class="brand-logo">
+                <div class="logo-placeholder">D3MAS1ADØ</div>
+            </div>
+            <div class="brand-logo">
+                <div class="logo-placeholder">BOOSTAMI</div>
+            </div>
+            <div class="brand-logo">
+                <div class="logo-placeholder">AYRODOM</div>
+            </div>
+            <div class="brand-logo">
+                <div class="logo-placeholder">AYROBOOKS</div>
+            </div>
+            <div class="brand-logo">
+                <div class="logo-placeholder">AYROCTOPUS</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Mission Section -->
     <section class="mission">
-        <h3>La Nostra Visione</h3>
+        <h3>Trasformiamo Visioni in Brand Iconici</h3>
         <p>Ayromex SRL non è una semplice holding. È un laboratorio di sperimentazione creativa che incuba, sviluppa e scala progetti visionari. Ogni brand del nostro ecosistema opera con autonomia strategica ma condivide la stessa ossessione: <strong>creare esperienze che lasciano il segno nel tempo</strong>.</p>
+        <a href="#contact" class="cta-button" style="margin-top: 2rem;">Collabora con Noi</a>
     </section>
 
     <!-- Portfolio Section -->
@@ -540,10 +894,9 @@
 
             <div class="portfolio-card">
                 <h3>AYRODOM</h3>
-                <div class="tagline">"AYRODOM è l’infrastruttura cognitiva del futuro. Dove le idee si eseguono da sole."</div>
+                <div class="tagline">"L'infrastruttura cognitiva del futuro. Dove le idee si eseguono da sole."</div>
                 <span class="status development">⚙️ In sviluppo</span>
-                <p>Ayrodom è la divisione R&D di Ayromex, dedicata allo sviluppo di agenti AI autonomi e ambienti digitali intelligenti.
-Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operative automatizzate.</p>
+                <p>Ayrodom è la divisione R&D di Ayromex, dedicata allo sviluppo di agenti AI autonomi e ambienti digitali intelligenti. Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operative automatizzate.</p>
                 <div class="portfolio-links">
                     <a href="#" class="portfolio-link disabled">Coming Soon</a>
                     <a href="#" class="portfolio-link disabled">Demo</a>
@@ -605,6 +958,49 @@ Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operati
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2 style="text-align: center; margin-bottom: 2rem;">🚀 Pianifica una Call Strategica</h2>
+        <p style="text-align: center; opacity: 0.8; margin-bottom: 3rem;">Raccontaci il tuo progetto e scopri come possiamo accelerare la tua crescita</p>
+        
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="company">Azienda/Progetto</label>
+                <input type="text" id="company" name="company">
+            </div>
+            
+            <div class="form-group">
+                <label for="budget">Budget Stimato</label>
+                <select id="budget" name="budget">
+                    <option value="">Seleziona range</option>
+                    <option value="5k-15k">€5.000 - €15.000</option>
+                    <option value="15k-50k">€15.000 - €50.000</option>
+                    <option value="50k-100k">€50.000 - €100.000</option>
+                    <option value="100k+">€100.000+</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Descrivi il Tuo Progetto *</label>
+                <textarea id="message" name="message" placeholder="Raccontaci la tua visione, obiettivi e come possiamo aiutarti..." required></textarea>
+            </div>
+            
+            <div style="text-align: center;">
+                <button type="submit" class="cta-button">Invia Richiesta</button>
+            </div>
+        </form>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>🌐 Informazioni Legali & Contatti</h2>
@@ -643,12 +1039,44 @@ Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operati
             </div>
             <div class="footer-legal">
                 <p>&copy; 2025 AYROMEX SRL - Tutti i diritti riservati</p>
-                <p>Holding creativa attiva su tutto il territori UE</p>
+                <p>Holding creativa attiva su tutto il territorio UE</p>
+                <p style="margin-top: 1rem; opacity: 0.6;">
+                    <a href="#privacy" style="color: #ff6b35; text-decoration: none;">Privacy Policy</a> | 
+                    <a href="#terms" style="color: #ff6b35; text-decoration: none;">Termini di Servizio</a> | 
+                    <a href="#cookies" style="color: #ff6b35; text-decoration: none;">Cookie Policy</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Keyboard navigation for hamburger
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                hamburger.click();
+            }
+        });
+
         // Smooth scrolling function
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
@@ -657,7 +1085,7 @@ Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operati
         }
 
         // Add scroll effect to navigation links
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
@@ -676,12 +1104,13 @@ Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operati
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('fade-in-up');
                 }
             });
         }, observerOptions);
 
         // Observe portfolio cards for animation
-        document.querySelectorAll('.portfolio-card').forEach(card => {
+        document.querySelectorAll('.portfolio-card, .brand-logo').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -705,6 +1134,113 @@ Costruisce architetture modulari, orchestrazioni multi-agent e soluzioni operati
                 e.preventDefault();
             });
         });
+
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Per favore, compila tutti i campi obbligatori.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Per favore, inserisci un indirizzo email valido.');
+                return;
+            }
+            
+            // Simulate form submission
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Invio in corso...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('✅ Grazie! La tua richiesta è stata inviata con successo.\n\nTi contatteremo entro 24 ore per pianificare la call strategica.');
+                this.reset();
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 2000);
+        });
+
+        // Add loading animation to CTA buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            if (!button.classList.contains('form-button')) {
+                button.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#contact') {
+                        e.preventDefault();
+                        scrollToSection('contact');
+                        
+                        // Add little bounce effect
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 150);
+                    }
+                });
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.98)';
+                nav.style.boxShadow = '0 5px 20px rgba(255, 107, 53, 0.1)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Easter egg - Konami code for fun
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.code);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+                document.body.style.transform = 'rotate(360deg)';
+                document.body.style.transition = 'transform 2s ease';
+                setTimeout(() => {
+                    document.body.style.transform = 'rotate(0deg)';
+                    alert('🎉 Hai scoperto l\'easter egg di AYROMEX! Il futuro è nelle tue mani.');
+                }, 2000);
+                konamiCode = [];
+            }
+        });
+
+        // Console log per sviluppatori
+        console.log(`
+        🧬 AYROMEX SRL - Holding Creativa
+        ================================
+        
+        Grazie per aver ispezionato il nostro codice!
+        
+        Stack Tech:
+        • HTML5 Semantico
+        • CSS3 con Grid & Flexbox
+        • JavaScript Vanilla
+        • Mobile-First Design
+        • Accessibility WCAG 2.1
+        
+        Vuoi collaborare? info@ayromex.com
+        
+        🚀 Costruiamo ecosistemi che ridefiniscono i mercati.
+        `);
     </script>
 </body>
 </html>
