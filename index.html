@@ -374,12 +374,24 @@
 }
 
 .brand-logo img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 100%; 
+    max-height: 100%; 
     object-fit: contain;
     filter: none;
+    transform: scale(1.5); /* AGGIUNGI SOLO QUESTA RIGA */
 }
-
+.brand-logo:hover img {
+    transform: scale(1.6); 
+}
+@media (max-width: 768px) {
+    .brand-logo img {
+        transform: scale(1.3); 
+    }
+    
+    .brand-logo:hover img {
+        transform: scale(1.4);
+    }
+}
 
         /* Sections */
         .section {
