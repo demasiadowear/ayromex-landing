@@ -222,19 +222,19 @@
             position: relative;
         }
 
-        .hero-logo {
-            width: 400px;
-            height: 160px;
-            margin: 0 auto 2rem auto;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 107, 53, 0.3);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
+       .hero-logo {
+    width: 500px;  /* DA 400px A 500px */
+    height: 200px; /* DA 160px A 200px */
+    margin: 0 auto 2rem auto;
+    background: rgba(255, 255, 255, 0.95); /* Sfondo più bianco */
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
 
         .hero-logo:hover {
             border-color: #ff6b35;
@@ -242,13 +242,12 @@
             transform: translateY(-5px);
         }
 
-        .hero-logo img {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-        }
-
+      .hero-logo img {
+    max-width: 85%;  /* DA 80% A 85% */
+    max-height: 85%; /* DA 80% A 85% */
+    object-fit: contain;
+    filter: none; /* RIMUOVI IL FILTRO BIANCO */
+}
         .hero .subtitle {
             font-size: 1.2rem;
             color: #ff6b35;
@@ -346,17 +345,17 @@
             align-items: center;
         }
 
-        .brand-logo {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 107, 53, 0.1);
-            transition: all 0.3s ease;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+       .brand-logo {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95); /* Sfondo più bianco */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    transition: all 0.3s ease;
+    height: 150px; /* DA 120px A 150px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
         .brand-logo:hover {
             transform: translateY(-5px);
@@ -364,20 +363,19 @@
             box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
         }
 
-        .brand-logo .logo-placeholder {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #ff6b35;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .brand-logo img {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-        }
+      .brand-logo .logo-placeholder {
+    font-size: 1.4rem; /* DA 1.2rem A 1.4rem */
+    font-weight: bold;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+       .brand-logo img {
+    max-width: 90%;  /* DA 80% A 90% */
+    max-height: 90%; /* DA 80% A 90% */
+    object-fit: contain;
+    filter: none; /* RIMUOVI IL FILTRO BIANCO */
+}
 
         /* Sections */
         .section {
@@ -679,23 +677,29 @@
         }
 
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-logo {
-                width: 280px;
-                height: 120px;
-            }
-            
-            .hero-content {
-                padding: 1rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hamburger {
-                display: flex;
-            }
+    @media (max-width: 768px) {
+    .hero-logo {
+        width: 350px;
+        height: 140px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .brand-logo {
+        height: 130px; /* ← AGGIUNGI QUESTA RIGA QUI */
+    }
+    
+    /* resto del CSS mobile... */
             
             .hero p {
                 font-size: 1.1rem;
