@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AYROMEX — Branding, Social, Materiali Marketing</title>
+  <meta name="description" content="AYROMEX: branding, social content e materiali marketing per attività locali. Automazioni AI in arrivo. Richiedi una consulenza." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "system-ui", "sans-serif"], playfair: ["Playfair Display", "serif"] },
+          colors: {
+            navy: "#0A0E27",
+            royal: "#1E40AF",
+            electric: "#3B82F6",
+            ice: "#F8FAFC"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="font-inter text-slate-900 bg-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur border-b border-white/10">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#top" class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-lg bg-white/10 border border-white/15 grid place-items-center text-white font-semibold">A</div>
+          <span class="text-white font-semibold tracking-wide">AYROMEX</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+          <a class="hover:text-white transition" href="#servizi">Servizi</a>
+          <a class="hover:text-white transition" href="#portfolio">Portfolio</a>
+          <a class="hover:text-white transition" href="#processo">Processo</a>
+          <a class="hover:text-white transition" href="#contatti">Contatti</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#contatti" class="hidden sm:inline-flex h-10 items-center rounded-lg bg-royal px-4 text-white font-semibold shadow-lg shadow-royal/30 hover:bg-royal/90 transition">
+            Richiedi consulenza
+          </a>
+          <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 border border-white/15 text-white">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile nav -->
+      <div id="mobileNav" class="md:hidden hidden pb-4">
+        <div class="grid gap-2 text-sm text-white/80">
+          <a class="rounded-lg px-3 py-2 bg-white/5 hover:bg-white/10" href="#servizi">Servizi</a>
+          <a class="rounded-lg px-3 py-2 bg-white/5 hover:bg-white/10" href="#portfolio">Portfolio</a>
+          <a class="rounded-lg px-3 py-2 bg-white/5 hover:bg-white/10" href="#processo">Processo</a>
+          <a class="rounded-lg px-3 py-2 bg-white/5 hover:bg-white/10" href="#contatti">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-royal">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-electric blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-white blur-3xl"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+        <div class="max-w-4xl">
+          <h1 class="font-playfair text-4xl md:text-6xl leading-tight text-white">
+            Branding e contenuti che trasformano la tua attività in un brand riconoscibile
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">
+            Grafica strategica, gestione social professionale e materiali di comunicazione che portano risultati concreti.
+            Per ristoranti, hotel, retail e professionisti che vogliono crescere.
+          </p>
+
+          <p class="mt-6 text-sm tracking-wide text-white/70 uppercase">
+            Bari e provincia · Lavori reali · Consegne rapide
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#contatti"
+               class="h-14 inline-flex items-center justify-center rounded-lg bg-royal px-6 text-white font-semibold shadow-xl shadow-royal/30 hover:bg-royal/90 transition">
+              Richiedi una consulenza
+            </a>
+            <a href="WHATSAPP_LINK"
+               class="h-14 inline-flex items-center justify-center rounded-lg border border-white/30 px-6 text-white font-semibold hover:bg-white hover:text-navy transition">
+              Scrivici su WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servizi -->
+    <section id="servizi" class="bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="text-center">
+          <h2 class="font-playfair text-3xl md:text-5xl">I nostri servizi</h2>
+          <p class="mt-4 text-slate-600">Soluzioni complete per la tua comunicazione visiva</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="rounded-2xl border border-slate-200 p-10 hover:shadow-xl transition">
+            <div class="text-electric text-4xl">✦</div>
+            <h3 class="mt-6 font-playfair text-2xl">Branding & Identità visiva</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Costruiamo l'identità del tuo brand da zero o la rinnoviamo completamente.
+            </p>
+            <ul class="mt-6 space-y-3 text-slate-700">
+              <li>• Logo professionale e declinazioni</li>
+              <li>• Brand kit completo (colori, font, linee guida)</li>
+              <li>• Materiali coordinati (biglietti, carta intestata)</li>
+              <li>• Consulenza direzione creativa</li>
+            </ul>
+            <div class="mt-6 text-sm text-slate-600">
+              <p><span class="font-semibold text-slate-800">Per chi:</span> aperture nuove, rebranding, upgrade immagine</p>
+              <p class="mt-2"><span class="font-semibold text-slate-800">Risultato:</span> identità forte, memorabile e applicabile</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="rounded-2xl border border-slate-200 p-10 hover:shadow-xl transition">
+            <div class="text-electric text-4xl">⌁</div>
+            <h3 class="mt-6 font-playfair text-2xl">Social content & grafiche</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Contenuti visivi che catturano l'attenzione e comunicano il tuo messaggio.
+            </p>
+            <ul class="mt-6 space-y-3 text-slate-700">
+              <li>• Post e stories Instagram/Facebook</li>
+              <li>• Cover per Reels e contenuti video</li>
+              <li>• Locandine eventi e tornei</li>
+              <li>• Template Canva personalizzati (modificabili)</li>
+            </ul>
+            <div class="mt-6 text-sm text-slate-600">
+              <p><span class="font-semibold text-slate-800">Per chi:</span> presenza social costante e di qualità</p>
+              <p class="mt-2"><span class="font-semibold text-slate-800">Risultato:</span> feed coerente, engagement e riconoscibilità</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="rounded-2xl border border-slate-200 p-10 hover:shadow-xl transition">
+            <div class="text-electric text-4xl">▦</div>
+            <h3 class="mt-6 font-playfair text-2xl">Materiali marketing & stampa</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Tutti i supporti fisici e digitali per comunicare con i tuoi clienti.
+            </p>
+            <ul class="mt-6 space-y-3 text-slate-700">
+              <li>• Menù ristoranti (stampa e digitale QR)</li>
+              <li>• Insegne e cartelli vetrina</li>
+              <li>• Flyer, brochure e volantini</li>
+              <li>• Packaging e etichette</li>
+            </ul>
+            <div class="mt-6 text-sm text-slate-600">
+              <p><span class="font-semibold text-slate-800">Per chi:</span> attività fisiche con materiali stampati</p>
+              <p class="mt-2"><span class="font-semibold text-slate-800">Risultato:</span> file print-ready e comunicazione offline solida</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="bg-ice">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="text-center">
+          <h2 class="font-playfair text-3xl md:text-5xl">Lavori recenti</h2>
+          <p class="mt-4 text-slate-600">Esempi reali per attività locali come la tua</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- 9 placeholders -->
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Poker Room — Locandine tornei</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Hotel — Brand identity</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Retail moda — Social content</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">B&B — Promo e offerte</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Pizzeria — Menù e materiali</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Card Room — Naming & logo</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Ristorante — Insegne</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Negozio — Visual identity</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm border border-slate-200">
+            <div class="aspect-[4/3] bg-gradient-to-br from-royal/90 to-electric/60 grid place-items-center text-white text-3xl">◇</div>
+            <div class="p-4 text-xs font-semibold tracking-wider uppercase text-slate-700">Boutique — Direzione creativa</div>
+          </div>
+        </div>
+
+        <p class="mt-10 text-center text-slate-600">
+          Portfolio completo disponibile su richiesta con case study dettagliati.
+        </p>
+      </div>
+    </section>
+
+    <!-- Processo -->
+    <section id="processo" class="bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="text-center">
+          <h2 class="font-playfair text-3xl md:text-5xl">Come lavoriamo</h2>
+          <p class="mt-4 text-slate-600">Un processo semplice, veloce e trasparente</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-5">
+          <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="h-12 w-12 rounded-xl bg-royal/10 text-royal grid place-items-center font-semibold">01</div>
+            <h3 class="mt-4 font-semibold">Brief veloce</h3>
+            <p class="mt-2 text-sm text-slate-600">10 minuti di call o questionario per obiettivi e preferenze.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="h-12 w-12 rounded-xl bg-royal/10 text-royal grid place-items-center font-semibold">02</div>
+            <h3 class="mt-4 font-semibold">Proposte creative</h3>
+            <p class="mt-2 text-sm text-slate-600">2–3 concept con mood e prime bozze visive.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="h-12 w-12 rounded-xl bg-royal/10 text-royal grid place-items-center font-semibold">03</div>
+            <h3 class="mt-4 font-semibold">Refinement</h3>
+            <p class="mt-2 text-sm text-slate-600">Affinamento fino alla versione definitiva.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="h-12 w-12 rounded-xl bg-royal/10 text-royal grid place-items-center font-semibold">04</div>
+            <h3 class="mt-4 font-semibold">Consegna completa</h3>
+            <p class="mt-2 text-sm text-slate-600">File vettoriali/alta risoluzione + template Canva.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="h-12 w-12 rounded-xl bg-royal/10 text-royal grid place-items-center font-semibold">05</div>
+            <h3 class="mt-4 font-semibold">Supporto</h3>
+            <p class="mt-2 text-sm text-slate-600">Assistenza post-consegna e pacchetti mensili.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Coming soon -->
+    <section class="bg-gradient-to-br from-royal to-electric">
+      <div class="mx-auto max-w-6xl px-4 py-24">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/15">
+            Coming soon
+          </span>
+          <h2 class="mt-5 font-playfair text-3xl md:text-5xl text-white">Automazioni AI per la tua attività</h2>
+          <p class="mt-4 text-white/90 text-lg">
+            Presto disponibili: strumenti intelligenti che ti fanno risparmiare ore di lavoro manuale.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">💬</div>
+            <p class="mt-3 text-sm leading-relaxed">Risposte WhatsApp e DM guidate con FAQ automatiche</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">🎯</div>
+            <p class="mt-3 text-sm leading-relaxed">Raccolta lead da social e follow-up automatico personalizzato</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">📄</div>
+            <p class="mt-3 text-sm leading-relaxed">Preventivi semi-automatici basati su domande precompilate</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">🔔</div>
+            <p class="mt-3 text-sm leading-relaxed">Reminder appuntamenti e conferme prenotazioni</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">📊</div>
+            <p class="mt-3 text-sm leading-relaxed">Report settimanali automatici su performance e richieste</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white/90">
+            <div class="text-2xl">🤖</div>
+            <p class="mt-3 text-sm leading-relaxed">Assistente virtuale disponibile 24/7 per i tuoi clienti</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <p class="text-white/90">Interessato? Entra in lista d’attesa.</p>
+          <a href="#contatti" class="mt-4 inline-flex h-12 items-center justify-center rounded-lg border border-white/40 px-6 text-white font-semibold hover:bg-white hover:text-royal transition">
+            Entra in lista d’attesa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-ice">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="text-center">
+          <h2 class="font-playfair text-3xl md:text-5xl">Domande frequenti</h2>
+          <p class="mt-4 text-slate-600">Risposte brevi, zero misteri</p>
+        </div>
+
+        <div class="mt-14 mx-auto max-w-3xl space-y-4">
+          <!-- item -->
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 p-6">
+            <button class="faq-btn w-full flex items-center justify-between text-left">
+              <span class="font-semibold">Quali sono i tempi medi di consegna?</span>
+              <span class="faq-ico text-slate-500">▾</span>
+            </button>
+            <div class="faq-body hidden mt-4 text-slate-600 leading-relaxed">
+              Dipende dal progetto: logo 7–10 giorni, materiali social 3–5 giorni, branding completo 3–4 settimane.
+              Urgenze possibili con modalità express.
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 p-6">
+            <button class="faq-btn w-full flex items-center justify-between text-left">
+              <span class="font-semibold">Cosa serve per iniziare?</span>
+              <span class="faq-ico text-slate-500">▾</span>
+            </button>
+            <div class="faq-body hidden mt-4 text-slate-600 leading-relaxed">
+              Un brief: nome attività, settore, obiettivi, preferenze estetiche (se le hai) e qualche riferimento di stile.
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 p-6">
+            <button class="faq-btn w-full flex items-center justify-between text-left">
+              <span class="font-semibold">Consegnate file pronti per la stampa?</span>
+              <span class="faq-ico text-slate-500">▾</span>
+            </button>
+            <div class="faq-body hidden mt-4 text-slate-600 leading-relaxed">
+              Sì: PDF alta risoluzione, specifiche tecniche e formati corretti per tipografia e digitale.
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 p-6">
+            <button class="faq-btn w-full flex items-center justify-between text-left">
+              <span class="font-semibold">Lavorate anche solo con Canva?</span>
+              <span class="faq-ico text-slate-500">▾</span>
+            </button>
+            <div class="faq-body hidden mt-4 text-slate-600 leading-relaxed">
+              Sì: template personalizzati e modificabili, perfetti se gestisci i social in autonomia.
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 p-6">
+            <button class="faq-btn w-full flex items-center justify-between text-left">
+              <span class="font-semibold">Come funzionano le automazioni AI?</span>
+              <span class="faq-ico text-slate-500">▾</span>
+            </button>
+            <div class="faq-body hidden mt-4 text-slate-600 leading-relaxed">
+              Flussi su misura che collegano chat, contatti e strumenti operativi (WhatsApp, Instagram, CRM).
+              In fase di lancio: puoi entrare in lista d’attesa dal form.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section id="contatti" class="bg-navy">
+      <div class="mx-auto max-w-6xl px-4 py-24">
+        <div class="mx-auto max-w-2xl bg-white rounded-2xl p-8 md:p-12 shadow-2xl shadow-black/30">
+          <h2 class="font-playfair text-3xl text-center">Richiedi una consulenza</h2>
+          <p class="mt-3 text-center text-slate-600">Compila il form: risposta rapida con una proposta su misura.</p>
+
+          <!-- action: sostituisci con Formspree/Getform/endpoint -->
+          <form class="mt-10 space-y-5" action="#" method="POST">
+            <div>
+              <label class="text-sm font-semibold">Nome e attività *</label>
+              <input class="mt-2 w-full h-12 rounded-lg border border-slate-300 px-4 focus:outline-none focus:ring-4 focus:ring-royal/20 focus:border-royal"
+                     type="text" required placeholder="Es: Mario Rossi — Ristorante Da Mario">
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Città *</label>
+              <input class="mt-2 w-full h-12 rounded-lg border border-slate-300 px-4 focus:outline-none focus:ring-4 focus:ring-royal/20 focus:border-royal"
+                     type="text" required placeholder="Es: Bari">
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Contatto (telefono o email) *</label>
+              <input class="mt-2 w-full h-12 rounded-lg border border-slate-300 px-4 focus:outline-none focus:ring-4 focus:ring-royal/20 focus:border-royal"
+                     type="text" required placeholder="Es: 3331234567 o info@esempio.it">
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Cosa ti serve? *</label>
+              <select class="mt-2 w-full h-12 rounded-lg border border-slate-300 px-4 bg-white focus:outline-none focus:ring-4 focus:ring-royal/20 focus:border-royal" required>
+                <option value="" selected>Seleziona un'opzione</option>
+                <option>Branding completo / Logo</option>
+                <option>Gestione social e contenuti</option>
+                <option>Materiali marketing (menù, insegne, stampa)</option>
+                <option>Consulenza generale</option>
+                <option>Altro</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Messaggio (opzionale)</label>
+              <textarea class="mt-2 w-full min-h-[140px] rounded-lg border border-slate-300 p-4 focus:outline-none focus:ring-4 focus:ring-royal/20 focus:border-royal"
+                        placeholder="Raccontaci brevemente esigenze e obiettivi"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input id="ai-interest" type="checkbox" class="mt-1 h-5 w-5 rounded border-slate-300 text-royal focus:ring-royal">
+              <label for="ai-interest" class="text-sm text-slate-700">
+                Voglio ricevere informazioni sulle Automazioni AI (coming soon)
+              </label>
+            </div>
+
+            <button type="submit"
+                    class="w-full h-14 rounded-lg bg-royal text-white font-semibold hover:bg-royal/90 shadow-xl shadow-royal/20 transition">
+              Invia richiesta
+            </button>
+
+            <p class="text-xs text-slate-500">
+              Cliccando “Invia” accetti il trattamento dei dati secondo la normativa privacy. Nessuna condivisione con terzi.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#05081a]">
+      <div class="mx-auto max-w-6xl px-4 py-10 text-center text-white/70 text-sm">
+        <p>© 2026 AYROMEX S.R.L. — P.IVA: PIVA_PLACEHOLDER — Bari, Italia</p>
+        <p class="mt-2">Branding · Social · Automazioni AI</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+      mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.add('hidden')));
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const body = item.querySelector('.faq-body');
+      const ico = item.querySelector('.faq-ico');
+      btn.addEventListener('click', () => {
+        const isHidden = body.classList.contains('hidden');
+        document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+        document.querySelectorAll('.faq-ico').forEach(i => i.textContent = '▾');
+        if (isHidden) { body.classList.remove('hidden'); ico.textContent = '▴'; }
+      });
+    });
+  </script>
+</body>
+</html>
