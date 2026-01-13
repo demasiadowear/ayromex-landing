@@ -3,206 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AYROMEX — Comunicazione Visiva & Automazioni AI (Coming Soon)</title>
-  <meta name="description" content="AYROMEX: branding, social content e materiali marketing per PMI. Automazioni AI in arrivo. Richiedi consulenza." />
+  <title>AYROMEX — Digital Creations & AI Systems</title>
+  <meta name="description" content="AYROMEX: branding, social content e materiali marketing per PMI. Automazioni AI in arrivo. Società UE con sede in Romania." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { inter: ["Inter", "system-ui", "sans-serif"], space: ["Space Grotesk", "system-ui", "sans-serif"] },
+          fontFamily: {
+            inter: ["Inter", "system-ui", "sans-serif"],
+            space: ["Space Grotesk", "system-ui", "sans-serif"]
+          },
           colors: {
-            slate900: "#0F172A",
-            slate800: "#1E293B",
-            slate100: "#F1F5F9",
-            indigo500: "#6366F1",
-            indigo400: "#818CF8",
-            indigo200: "#C7D2FE"
+            axBlack: "#050505",
+            axDark:  "#0B0B0B",
+            axMid:   "#121212",
+            axLine:  "#1F1F1F",
+            axText:  "#EDEDED",
+            axMuted: "#A9A9A9",
+            axOrange:"#FB6C01"  // preso dal logo (circa)
           }
         }
       }
     }
   </script>
-  <style>html{scroll-behavior:smooth}</style>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="font-inter bg-white text-slate-900">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-slate900 border-b border-indigo500/20">
+<body class="font-inter bg-axBlack text-axText">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-axBlack/90 backdrop-blur border-b border-axLine">
     <div class="mx-auto max-w-6xl px-4">
       <div class="h-16 flex items-center justify-between">
-        <a href="#top" class="font-space text-white text-xl font-bold tracking-tight">AYROMEX</a>
 
-        <nav class="hidden md:flex items-center gap-10 text-sm text-slate-300">
-          <a class="hover:text-indigo400 transition" href="#servizi">Servizi</a>
-          <a class="hover:text-indigo400 transition" href="#portfolio">Portfolio</a>
-          <a class="hover:text-indigo400 transition" href="#processo">Processo</a>
-          <a class="hover:text-indigo400 transition" href="#contatti">Contatti</a>
+        <a href="#top" class="flex items-center gap-3">
+          <!-- Logo: metti il tuo file qui -->
+          <img src="assets/ayromex-logo.png" alt="AYROMEX" class="h-8 w-auto" onerror="this.style.display='none'">
+          <div class="font-space text-white text-lg font-bold tracking-tight">
+            AYROMEX <span class="text-axOrange">/</span> Digital Creations
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-10 text-sm text-axMuted">
+          <a class="hover:text-axOrange transition" href="#servizi">Servizi</a>
+          <a class="hover:text-axOrange transition" href="#portfolio">Portfolio</a>
+          <a class="hover:text-axOrange transition" href="#chi-siamo">Chi siamo</a>
+          <a class="hover:text-axOrange transition" href="#contatti">Contatti</a>
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="#contatti" class="hidden sm:inline-flex h-10 items-center rounded-sm bg-indigo500 px-4 text-white font-semibold hover:opacity-90 transition">
+          <a href="#contatti" class="hidden sm:inline-flex h-10 items-center rounded-sm bg-axOrange px-4 text-axBlack font-semibold hover:opacity-90 transition">
             Richiedi consulenza
           </a>
-          <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-sm border border-indigo500/30 text-white">
+          <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-sm border border-axLine text-white">
             ☰
           </button>
         </div>
       </div>
 
       <div id="mobileNav" class="hidden md:hidden pb-4">
-        <div class="grid gap-2 text-sm text-slate-300">
-          <a class="px-3 py-2 border border-indigo500/20 hover:border-indigo500/50" href="#servizi">Servizi</a>
-          <a class="px-3 py-2 border border-indigo500/20 hover:border-indigo500/50" href="#portfolio">Portfolio</a>
-          <a class="px-3 py-2 border border-indigo500/20 hover:border-indigo500/50" href="#processo">Processo</a>
-          <a class="px-3 py-2 border border-indigo500/20 hover:border-indigo500/50" href="#contatti">Contatti</a>
+        <div class="grid gap-2 text-sm text-axMuted">
+          <a class="px-3 py-2 border border-axLine hover:border-axOrange/60" href="#servizi">Servizi</a>
+          <a class="px-3 py-2 border border-axLine hover:border-axOrange/60" href="#portfolio">Portfolio</a>
+          <a class="px-3 py-2 border border-axLine hover:border-axOrange/60" href="#chi-siamo">Chi siamo</a>
+          <a class="px-3 py-2 border border-axLine hover:border-axOrange/60" href="#contatti">Contatti</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <main id="top">
-    <section class="relative min-h-[90vh] bg-slate900 overflow-hidden">
-      <div class="absolute inset-0 opacity-15">
+    <section class="relative overflow-hidden bg-axBlack">
+      <!-- grid/dots pattern -->
+      <div class="absolute inset-0 opacity-20">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.5" fill="#818CF8"></circle>
+            <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.4" fill="#FB6C01"></circle>
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#dots)" />
         </svg>
       </div>
 
-      <div class="relative mx-auto max-w-6xl px-4 py-20 flex items-center min-h-[90vh]">
+      <!-- glow -->
+      <div class="absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-axOrange/25 blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 h-[520px] w-[520px] rounded-full bg-white/5 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div class="max-w-3xl">
-          <span class="inline-flex items-center text-xs tracking-widest uppercase text-indigo400">AYROMEX · Bari</span>
+          <span class="inline-flex items-center text-xs tracking-[0.22em] uppercase text-axMuted">
+            AYROMEX · EU Company · Bari / Remote
+          </span>
+
           <h1 class="mt-5 font-space text-4xl md:text-6xl font-bold leading-tight text-white">
-            La tua comunicazione visiva. Finalmente professionale.
+            Comunicazione visiva <span class="text-axOrange">professionale</span>.
+            Identità <span class="text-axOrange">solida</span>. Risultati <span class="text-axOrange">concreti</span>.
           </h1>
-          <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl">
-            Branding strategico, social content di qualità e materiali di comunicazione per attività locali che vogliono distinguersi.
-            Niente fuffa. Solo risultati concreti.
+
+          <p class="mt-6 text-lg md:text-xl text-axMuted max-w-2xl">
+            Branding strategico, social content e materiali marketing per attività locali e PMI che vogliono distinguersi.
+            Automazioni AI in arrivo per ridurre lavoro manuale e aumentare lead.
           </p>
 
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#contatti" class="h-14 inline-flex items-center justify-center bg-indigo500 px-8 text-white font-semibold uppercase tracking-wide">
+            <a href="#contatti" class="h-14 inline-flex items-center justify-center bg-axOrange px-8 text-axBlack font-semibold uppercase tracking-widest hover:opacity-90 transition">
               Richiedi consulenza
             </a>
-            <a href="WHATSAPP_LINK" class="h-14 inline-flex items-center justify-center border border-indigo500 px-8 text-indigo200 font-semibold uppercase tracking-wide hover:bg-indigo500 hover:text-white transition">
+            <a href="WHATSAPP_LINK" class="h-14 inline-flex items-center justify-center border border-axOrange px-8 text-axOrange font-semibold uppercase tracking-widest hover:bg-axOrange hover:text-axBlack transition">
               WhatsApp
             </a>
           </div>
 
-          <p class="mt-12 text-xs tracking-widest text-slate-500 uppercase">
-            Lavori reali / Consegne rapide / Bari e provincia
+          <p class="mt-12 text-xs tracking-[0.22em] text-axMuted uppercase">
+            Lavori reali / Consegne rapide / Focus: Bari e provincia + remoto
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Servizi -->
-    <section id="servizi" class="bg-slate100">
+    <!-- SERVIZI -->
+    <section id="servizi" class="bg-[#070707] border-t border-axLine">
       <div class="mx-auto max-w-6xl px-4 py-24">
-        <h2 class="font-space text-3xl md:text-5xl font-bold text-slate900">Servizi attivi</h2>
+        <h2 class="font-space text-3xl md:text-5xl font-bold text-white">Servizi attivi</h2>
+        <p class="mt-4 text-axMuted max-w-2xl">Tre blocchi, zero confusione: identità, contenuti, materiali.</p>
 
-        <div class="mt-14 grid gap-[2px] md:grid-cols-3">
-          <article class="relative bg-white p-10 hover:scale-[1.02] transition">
-            <div class="absolute top-6 left-6 font-space text-6xl text-indigo500/20">01</div>
-            <h3 class="font-space text-2xl font-bold text-slate900">Branding & Identità</h3>
-            <p class="mt-4 text-slate-700">Identità visiva completa o rebranding. Dal logo al brand kit.</p>
-            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+        <div class="mt-14 grid gap-[2px] md:grid-cols-3 bg-axLine">
+          <!-- Card 1 -->
+          <article class="relative bg-axBlack p-10 hover:bg-axMid transition">
+            <div class="absolute top-6 left-6 font-space text-6xl text-axOrange/15">01</div>
+            <h3 class="font-space text-2xl font-bold text-white">Branding & Identità</h3>
+            <p class="mt-4 text-axMuted">Identità visiva completa o rebranding. Dal logo al brand kit.</p>
+            <ul class="mt-6 space-y-3 text-sm text-axText/90">
               <li>▪ Logo + declinazioni</li>
               <li>▪ Palette colori e tipografia</li>
-              <li>▪ Brand guidelines</li>
+              <li>▪ Linee guida e applicazioni</li>
               <li>▪ Materiali coordinati</li>
             </ul>
-            <div class="mt-6 border-l-4 border-indigo500 bg-slate-50 p-4 text-sm">
-              <p class="text-slate-700">→ Per: aperture, rebranding, upgrade immagine</p>
-              <p class="mt-2 text-slate-700">→ Output: identità forte e applicabile</p>
+            <div class="mt-6 border-l-4 border-axOrange bg-white/5 p-4 text-sm">
+              <p class="text-axMuted">→ Per: aperture, rebranding, upgrade immagine</p>
+              <p class="mt-2 text-axMuted">→ Output: identità forte e applicabile</p>
             </div>
           </article>
 
-          <article class="relative bg-white p-10 hover:scale-[1.02] transition">
-            <div class="absolute top-6 left-6 font-space text-6xl text-indigo500/20">02</div>
-            <h3 class="font-space text-2xl font-bold text-slate900">Social & Eventi</h3>
-            <p class="mt-4 text-slate-700">Contenuti visivi che convertono. Post, stories, locandine.</p>
-            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+          <!-- Card 2 -->
+          <article class="relative bg-axBlack p-10 hover:bg-axMid transition">
+            <div class="absolute top-6 left-6 font-space text-6xl text-axOrange/15">02</div>
+            <h3 class="font-space text-2xl font-bold text-white">Social & Eventi</h3>
+            <p class="mt-4 text-axMuted">Post, stories, cover reels e grafiche eventi che comunicano sul serio.</p>
+            <ul class="mt-6 space-y-3 text-sm text-axText/90">
               <li>▪ Post Instagram/Facebook</li>
-              <li>▪ Cover Reels</li>
-              <li>▪ Grafiche eventi/tornei</li>
+              <li>▪ Cover Reels e video</li>
+              <li>▪ Locandine eventi/tornei</li>
               <li>▪ Template Canva custom</li>
             </ul>
-            <div class="mt-6 border-l-4 border-indigo500 bg-slate-50 p-4 text-sm">
-              <p class="text-slate-700">→ Per: presenza social costante</p>
-              <p class="mt-2 text-slate-700">→ Output: feed coerente, più engagement</p>
+            <div class="mt-6 border-l-4 border-axOrange bg-white/5 p-4 text-sm">
+              <p class="text-axMuted">→ Per: presenza costante + coerenza</p>
+              <p class="mt-2 text-axMuted">→ Output: feed riconoscibile, più engagement</p>
             </div>
           </article>
 
-          <article class="relative bg-white p-10 hover:scale-[1.02] transition">
-            <div class="absolute top-6 left-6 font-space text-6xl text-indigo500/20">03</div>
-            <h3 class="font-space text-2xl font-bold text-slate900">Marketing fisico</h3>
-            <p class="mt-4 text-slate-700">Materiali stampati e digitali. Menù, insegne, packaging.</p>
-            <ul class="mt-6 space-y-3 text-sm text-slate-700">
-              <li>▪ Menù (print + QR)</li>
+          <!-- Card 3 -->
+          <article class="relative bg-axBlack p-10 hover:bg-axMid transition">
+            <div class="absolute top-6 left-6 font-space text-6xl text-axOrange/15">03</div>
+            <h3 class="font-space text-2xl font-bold text-white">Materiali marketing</h3>
+            <p class="mt-4 text-axMuted">Supporti stampati e digitali: menù, insegne, packaging, flyer.</p>
+            <ul class="mt-6 space-y-3 text-sm text-axText/90">
+              <li>▪ Menù (stampa + QR)</li>
               <li>▪ Insegne e vetrine</li>
               <li>▪ Flyer e brochure</li>
               <li>▪ Packaging ed etichette</li>
             </ul>
-            <div class="mt-6 border-l-4 border-indigo500 bg-slate-50 p-4 text-sm">
-              <p class="text-slate-700">→ Per: comunicazione offline</p>
-              <p class="mt-2 text-slate-700">→ Output: file print-ready</p>
+            <div class="mt-6 border-l-4 border-axOrange bg-white/5 p-4 text-sm">
+              <p class="text-axMuted">→ Per: comunicazione offline</p>
+              <p class="mt-2 text-axMuted">→ Output: file print-ready</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="bg-white">
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-axBlack border-t border-axLine">
       <div class="mx-auto max-w-6xl px-4 py-24">
         <div class="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <h2 class="font-space text-3xl md:text-5xl font-bold">Portfolio</h2>
-            <p class="mt-3 text-slate-600">Case study completi disponibili su richiesta</p>
+            <h2 class="font-space text-3xl md:text-5xl font-bold text-white">Portfolio</h2>
+            <p class="mt-3 text-axMuted">Placeholder ora, poi ci mettiamo i lavori veri (meglio 9 buoni che 90 medi).</p>
           </div>
         </div>
 
         <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <!-- Cards -->
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <!-- cards -->
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Poker · Tornei</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Hotel · Identity</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Retail · Social</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">B&B · Promo</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Food · Menù</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Card Room · Logo</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Ristorante · Insegne</div>
           </div>
-          <div class="relative aspect-[4/3] bg-slate900 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-axMid border border-axLine overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white text-xs font-bold tracking-widest uppercase">Shop · Visual</div>
           </div>
@@ -210,161 +241,113 @@
       </div>
     </section>
 
-    <!-- Processo -->
-    <section id="processo" class="bg-slate900">
+    <!-- CHI SIAMO + DATI UE -->
+    <section id="chi-siamo" class="bg-[#070707] border-t border-axLine">
       <div class="mx-auto max-w-6xl px-4 py-24">
-        <h2 class="font-space text-3xl md:text-5xl font-bold text-white">Come funziona</h2>
+        <h2 class="font-space text-3xl md:text-5xl font-bold text-white">AYROMEX — ecosistema europeo</h2>
+        <p class="mt-5 text-axMuted max-w-3xl leading-relaxed">
+          AYROMEX opera come struttura europea (UE) per progetti di comunicazione visiva e sistemi digitali.
+          Oggi i servizi attivi sono branding/social/materiali marketing. Le automazioni AI sono in fase di rollout (coming soon).
+        </p>
 
-        <div class="mt-14 grid gap-8 md:grid-cols-5">
-          <!-- step -->
-          <div class="text-center">
-            <div class="mx-auto h-20 w-20 rounded-full border-2 border-indigo500 grid place-items-center font-space text-2xl text-indigo400">01</div>
-            <h3 class="mt-6 font-space text-lg font-bold text-white">Brief</h3>
-            <p class="mt-2 text-sm text-slate-400 leading-relaxed">10 min call o form. Obiettivi + preferenze.</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="border border-axLine bg-axBlack p-6">
+            <p class="text-xs tracking-widest uppercase text-axMuted">Denominazione</p>
+            <p class="mt-2 text-white font-semibold">AYROMEX S.R.L.</p>
           </div>
-          <div class="text-center">
-            <div class="mx-auto h-20 w-20 rounded-full border-2 border-indigo500 grid place-items-center font-space text-2xl text-indigo400">02</div>
-            <h3 class="mt-6 font-space text-lg font-bold text-white">Concept</h3>
-            <p class="mt-2 text-sm text-slate-400 leading-relaxed">2–3 proposte visive + mood.</p>
+          <div class="border border-axLine bg-axBlack p-6">
+            <p class="text-xs tracking-widest uppercase text-axMuted">Registrazione</p>
+            <p class="mt-2 text-white font-semibold">CUI 52014564 · J2025044424001</p>
           </div>
-          <div class="text-center">
-            <div class="mx-auto h-20 w-20 rounded-full border-2 border-indigo500 grid place-items-center font-space text-2xl text-indigo400">03</div>
-            <h3 class="mt-6 font-space text-lg font-bold text-white">Refine</h3>
-            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Scelta direzione + affinamento.</p>
+          <div class="border border-axLine bg-axBlack p-6">
+            <p class="text-xs tracking-widest uppercase text-axMuted">EUID</p>
+            <p class="mt-2 text-white font-semibold">ROONRC.J2025044424001</p>
           </div>
-          <div class="text-center">
-            <div class="mx-auto h-20 w-20 rounded-full border-2 border-indigo500 grid place-items-center font-space text-2xl text-indigo400">04</div>
-            <h3 class="mt-6 font-space text-lg font-bold text-white">Delivery</h3>
-            <p class="mt-2 text-sm text-slate-400 leading-relaxed">File finali + template Canva.</p>
-          </div>
-          <div class="text-center">
-            <div class="mx-auto h-20 w-20 rounded-full border-2 border-indigo500 grid place-items-center font-space text-2xl text-indigo400">05</div>
-            <h3 class="mt-6 font-space text-lg font-bold text-white">Support</h3>
-            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Assistenza post-consegna.</p>
-          </div>
+        </div>
+
+        <div class="mt-6 border border-axLine bg-axBlack p-6">
+          <p class="text-xs tracking-widest uppercase text-axMuted">Sede legale</p>
+          <p class="mt-2 text-axText/90">
+            București Sectorul 4, Aleea Izvorul Oltului, Nr. 6, Bl. 29, Sc. B, Et. 2, Ap. 24 (Romania, UE)
+          </p>
+          <p class="mt-3 text-xs text-axMuted">
+            Attività principale: 7311 (Agenzie pubblicitarie). Società registrata in UE (Romania).
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- AI -->
-    <section class="bg-gradient-to-b from-slate900 to-[#0b0f2a]">
-      <div class="mx-auto max-w-6xl px-4 py-28">
-        <span class="inline-flex items-center border border-indigo500 px-4 py-2 rounded-full text-xs uppercase tracking-widest text-indigo400">
-          Coming soon
+    <!-- AI COMING SOON -->
+    <section class="bg-axBlack border-t border-axLine">
+      <div class="mx-auto max-w-6xl px-4 py-24">
+        <span class="inline-flex items-center border border-axOrange px-4 py-2 rounded-full text-xs uppercase tracking-widest text-axOrange">
+          Comingispetto: Coming soon
         </span>
         <h2 class="mt-6 font-space text-3xl md:text-6xl font-bold text-white">Automazioni AI</h2>
-        <p class="mt-4 text-slate-300 max-w-2xl">
+        <p class="mt-4 text-axMuted max-w-2xl">
           Strumenti intelligenti per automatizzare task ripetitivi: chat, lead, reminder e report.
         </p>
 
-        <div class="mt-14 grid gap-[1px] bg-indigo500/20 sm:grid-cols-3 lg:grid-cols-6">
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">💬</div>
-            <p class="text-sm text-slate-300">WhatsApp + DM auto</p>
+        <div class="mt-14 grid gap-[1px] bg-axLine sm:grid-cols-3 lg:grid-cols-6">
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">💬</div>
+            <p class="text-sm text-axMuted">WhatsApp + DM auto</p>
           </div>
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">🎯</div>
-            <p class="text-sm text-slate-300">Lead + follow-up</p>
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">🎯</div>
+            <p class="text-sm text-axMuted">Lead + follow-up</p>
           </div>
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">📄</div>
-            <p class="text-sm text-slate-300">Preventivi smart</p>
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">📄</div>
+            <p class="text-sm text-axMuted">Preventivi smart</p>
           </div>
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">🔔</div>
-            <p class="text-sm text-slate-300">Reminder booking</p>
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">🔔</div>
+            <p class="text-sm text-axMuted">Reminder booking</p>
           </div>
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">📊</div>
-            <p class="text-sm text-slate-300">Report automatici</p>
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">📊</div>
+            <p class="text-sm text-axMuted">Report automatici</p>
           </div>
-          <div class="bg-white/5 p-8 aspect-square flex flex-col justify-between">
-            <div class="text-2xl text-indigo400">🤖</div>
-            <p class="text-sm text-slate-300">Assistente 24/7</p>
+          <div class="bg-axMid p-8 aspect-square flex flex-col justify-between">
+            <div class="text-2xl text-axOrange">🤖</div>
+            <p class="text-sm text-axMuted">Assistente 24/7</p>
           </div>
         </div>
 
         <div class="mt-10">
-          <p class="text-slate-300">Lista d’attesa aperta.</p>
-          <a href="#contatti" class="mt-4 inline-flex h-16 w-full max-w-md items-center justify-center bg-indigo500 text-white font-semibold uppercase tracking-widest hover:opacity-90 transition">
+          <p class="text-axMuted">Lista d’attesa aperta.</p>
+          <a href="#contatti" class="mt-4 inline-flex h-16 w-full max-w-md items-center justify-center bg-axOrange text-axBlack font-semibold uppercase tracking-widest hover:opacity-90 transition">
             Entra in lista
           </a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="bg-white">
+    <!-- CONTATTI -->
+    <section id="contatti" class="bg-[#070707] border-t border-axLine">
       <div class="mx-auto max-w-6xl px-4 py-24">
-        <h2 class="font-space text-3xl md:text-5xl font-bold">FAQ</h2>
+        <div class="mx-auto max-w-xl bg-axBlack border border-axLine p-10">
+          <h2 class="font-space text-3xl font-bold text-white">Richiedi consulenza</h2>
+          <p class="mt-3 text-axMuted">Risposta rapida. Zero giri.</p>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-2">
-          <div class="faq-item border border-slate-200 p-8">
-            <button class="faq-btn w-full flex justify-between items-center text-left">
-              <span class="font-space text-lg font-bold">Tempi di consegna?</span>
-              <span class="faq-ico text-slate-400">▾</span>
-            </button>
-            <div class="faq-body hidden mt-5 text-slate-600">
-              Logo 7–10 giorni. Social 3–5 giorni. Branding completo 3–4 settimane. Urgenze possibili con modalità express.
-            </div>
-          </div>
-
-          <div class="faq-item border border-slate-200 p-8">
-            <button class="faq-btn w-full flex justify-between items-center text-left">
-              <span class="font-space text-lg font-bold">Cosa serve per partire?</span>
-              <span class="faq-ico text-slate-400">▾</span>
-            </button>
-            <div class="faq-body hidden mt-5 text-slate-600">
-              Nome attività, settore, obiettivi e riferimenti estetici (se li hai). Fine.
-            </div>
-          </div>
-
-          <div class="faq-item border border-slate-200 p-8">
-            <button class="faq-btn w-full flex justify-between items-center text-left">
-              <span class="font-space text-lg font-bold">File per stampa inclusi?</span>
-              <span class="faq-ico text-slate-400">▾</span>
-            </button>
-            <div class="faq-body hidden mt-5 text-slate-600">
-              Sì. PDF alta risoluzione e formati corretti per tipografia e digitale.
-            </div>
-          </div>
-
-          <div class="faq-item border border-slate-200 p-8">
-            <button class="faq-btn w-full flex justify-between items-center text-left">
-              <span class="font-space text-lg font-bold">Solo template Canva?</span>
-              <span class="faq-ico text-slate-400">▾</span>
-            </button>
-            <div class="faq-body hidden mt-5 text-slate-600">
-              Sì: template custom modificabili in autonomia.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Form -->
-    <section id="contatti" class="bg-slate100">
-      <div class="mx-auto max-w-6xl px-4 py-24">
-        <div class="mx-auto max-w-xl bg-white p-10">
-          <h2 class="font-space text-3xl font-bold">Richiedi consulenza</h2>
-          <p class="mt-3 text-slate-600">Risposta rapida. Zero giri.</p>
-
+          <!-- action: sostituisci con Formspree/Getform/endpoint -->
           <form class="mt-10 space-y-5" action="#" method="POST">
             <div>
-              <label class="block text-xs uppercase tracking-widest text-slate-700 font-semibold">Nome + Attività</label>
-              <input required class="mt-3 w-full border border-slate-300 p-4 focus:outline-none focus:border-indigo500" placeholder="Mario Rossi — Ristorante Da Mario">
+              <label class="block text-xs uppercase tracking-widest text-axMuted font-semibold">Nome + Attività</label>
+              <input required class="mt-3 w-full border border-axLine bg-axMid p-4 text-white focus:outline-none focus:border-axOrange" placeholder="Mario Rossi — Ristorante Da Mario">
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-widest text-slate-700 font-semibold">Città</label>
-              <input required class="mt-3 w-full border border-slate-300 p-4 focus:outline-none focus:border-indigo500" placeholder="Bari">
+              <label class="block text-xs uppercase tracking-widest text-axMuted font-semibold">Città</label>
+              <input required class="mt-3 w-full border border-axLine bg-axMid p-4 text-white focus:outline-none focus:border-axOrange" placeholder="Bari">
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-widest text-slate-700 font-semibold">Contatto</label>
-              <input required class="mt-3 w-full border border-slate-300 p-4 focus:outline-none focus:border-indigo500" placeholder="Telefono o email">
+              <label class="block text-xs uppercase tracking-widest text-axMuted font-semibold">Contatto</label>
+              <input required class="mt-3 w-full border border-axLine bg-axMid p-4 text-white focus:outline-none focus:border-axOrange" placeholder="Telefono o email">
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-widest text-slate-700 font-semibold">Servizio</label>
-              <select required class="mt-3 w-full border border-slate-300 p-4 bg-white focus:outline-none focus:border-indigo500">
+              <label class="block text-xs uppercase tracking-widest text-axMuted font-semibold">Servizio</label>
+              <select required class="mt-3 w-full border border-axLine bg-axMid p-4 text-white focus:outline-none focus:border-axOrange">
                 <option value="" selected>Seleziona</option>
                 <option>Branding / Logo</option>
                 <option>Social content</option>
@@ -374,33 +357,44 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-widest text-slate-700 font-semibold">Messaggio</label>
-              <textarea class="mt-3 w-full border border-slate-300 p-4 min-h-[160px] focus:outline-none focus:border-indigo500" placeholder="Dettagli progetto (opzionale)"></textarea>
+              <label class="block text-xs uppercase tracking-widest text-axMuted font-semibold">Messaggio</label>
+              <textarea class="mt-3 w-full border border-axLine bg-axMid p-4 text-white min-h-[160px] focus:outline-none focus:border-axOrange" placeholder="Dettagli progetto (opzionale)"></textarea>
             </div>
 
             <div class="flex items-start gap-3">
-              <input id="ai" type="checkbox" class="mt-1 h-5 w-5 border border-indigo500">
-              <label for="ai" class="text-sm text-slate-700">Info Automazioni AI (coming soon)</label>
+              <input id="ai" type="checkbox" class="mt-1 h-5 w-5 border border-axOrange accent-[#FB6C01]">
+              <label for="ai" class="text-sm text-axMuted">Info Automazioni AI (coming soon)</label>
             </div>
 
-            <button type="submit" class="w-full h-16 bg-slate900 text-white font-semibold uppercase tracking-widest hover:bg-indigo500 transition">
+            <button type="submit" class="w-full h-16 bg-axOrange text-axBlack font-semibold uppercase tracking-widest hover:opacity-90 transition">
               Invia richiesta
             </button>
 
-            <p class="text-xs text-slate-500">Accetti il trattamento dati privacy. Nessuna condivisione con terzi.</p>
+            <p class="text-xs text-axMuted">Accetti il trattamento dati privacy. Nessuna condivisione con terzi.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate900">
-      <div class="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
-        <p>© 2026 AYROMEX S.R.L. — Bari — P.IVA: PIVA_PLACEHOLDER</p>
-        <div class="flex gap-6">
-          <a class="hover:text-indigo400" href="#servizi">Servizi</a>
-          <a class="hover:text-indigo400" href="#contatti">Contatti</a>
+    <!-- FOOTER (DATI LEGALI) -->
+    <footer class="bg-axBlack border-t border-axLine">
+      <div class="mx-auto max-w-6xl px-4 py-10 text-axMuted text-sm">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p class="text-white font-semibold">AYROMEX S.R.L.</p>
+            <p class="mt-2">
+              CUI 52014564 · Registro Commercio J2025044424001 · EUID ROONRC.J2025044424001
+            </p>
+            <p class="mt-1">
+              Sede: București Sectorul 4, Aleea Izvorul Oltului, Nr. 6, Bl. 29, Sc. B, Et. 2, Ap. 24 (Romania, UE)
+            </p>
+          </div>
+          <div class="text-xs">
+            <p>Branding · Social · AI (coming soon)</p>
+            <p class="mt-1">WhatsApp: WHATSAPP_LINK</p>
+          </div>
         </div>
+        <p class="mt-8 text-xs text-axMuted/80">© 2026 AYROMEX. Tutti i diritti riservati.</p>
       </div>
     </footer>
   </main>
@@ -413,19 +407,7 @@
       menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
       mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.add('hidden')));
     }
-
-    // FAQ accordion (single open)
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const btn = item.querySelector('.faq-btn');
-      const body = item.querySelector('.faq-body');
-      const ico = item.querySelector('.faq-ico');
-      btn.addEventListener('click', () => {
-        const isHidden = body.classList.contains('hidden');
-        document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
-        document.querySelectorAll('.faq-ico').forEach(i => i.textContent = '▾');
-        if (isHidden) { body.classList.remove('hidden'); ico.textContent = '▴'; }
-      });
-    });
   </script>
 </body>
 </html>
+
